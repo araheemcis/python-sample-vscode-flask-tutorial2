@@ -14,7 +14,7 @@ variables:
   webAppName: 'ARwebapp1'
 
   # Agent VM image name
-  poolName: 'Azureagentpool'
+  poolName: 'azureagentpool01'
 
   # Environment name
   environmentName: 'ARwebapp1'
@@ -67,7 +67,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool:
-      vmImage: $(vmImageName)
+      name: $(poolName)
     environment: $(environmentName)
     strategy:
       runOnce:
