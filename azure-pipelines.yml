@@ -31,7 +31,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-       name: $(poolName)
+      name: $(poolName)
     steps:
     - task: UsePythonVersion@0
       inputs:
